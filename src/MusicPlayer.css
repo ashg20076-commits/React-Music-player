@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Cambo&display=swap');
+
+body{
+    
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.57)10%,
+        rgb(225, 55, 55) 
+    ) ;
+}
+
+.layout{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 200px;
+    height: 100vh;
+}
+
+
+img{
+    box-sizing: border-box;
+    width:400px;
+    height: 400px;
+    transition: 0.3s ease;
+    border-radius:25px;
+    box-shadow: 0px 0px 50px black;
+}
+
+@keyframes bobbing {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.bob-animation{
+   animation: bobbing 1.5s ease-in-out infinite;
+}
+
+.bob-animation-stop{
+    transform: translateY(0px)
+}
+
+.song-Info{
+    font-family: Alegreya Sans;
+
+   
+    display: flex;
+    margin:0px;
+    padding:0px;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 400px;
+    
+}
+
+.name{
+    color:rgb(12, 12, 12, 0.39);
+    margin-top: 20px;
+    font-family: Cambo;
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.artist{
+    color:rgb(12, 12, 12, 0.7);
+    margin-top: -30px;
+    font-size:1.3em;
+}
+
+.change-songs{
+    background: transparent;
+    display:flex;
+    flex-direction: row;
+    gap:10px;
+    margin-top: 20px;
+}
+
+.front{
+    background: transparent;
+    border: none;
+    outline: none;
+    
+    padding: 0;
+    color: rgb(20, 19, 19);
+    cursor: pointer;
+}
+
+.controls{
+    background: transparent;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    padding: 0;
+    color: rgb(23, 23, 23);
+    cursor: pointer;
+    
+}
+
+.front svg {
+    width: 50px;
+    height: 50px;
+    
+}
+
+.controls svg {
+    width: 70px;
+    height: 70px;
+}
+
+.slider{
+    height: 8px;
+    width: 500px;
+    align-items: center;
+    padding: 0px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    accent-color: rgb(148, 146, 146, 0.3);
+    background: rgba(64, 62, 62, 0.3);
+    appearance: none;
+    border-radius: 10px;
+    transition: 0.3s ease;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 10px black;
+}
+
+.slider-playing{
+    height: 8px;
+    width: 500px;
+    align-items: center;
+    padding: 0px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    accent-color: rgb(148, 146, 146, 0.3);
+    background: rgba(64, 62, 62, 0.3);
+    appearance: none;
+    border-radius: 10px;
+    transition: 0.2s ease;
+    animation: bobbing 2s ease-in-out infinite;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 10px black;
+}
+
+.slider-playing:active{
+    animation: none;
+    transform: scale(1.3);
+    box-shadow: 0px 0px 15px black;
+}
+
+.slider:active{
+    transform: scale(1.3);
+    box-shadow: 0px 0px 15px black;
+}
+
+.heart-song{
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   margin: 0px;
+   width: 800px;
+   
+}
+
+.heartBtn{
+    background: transparent;
+    border: 2px solid black;
+    border-radius: 50px;
+    align-content: center;
+    transition: 0.3s ease;
+
+}
+
+.heartBtn svg{
+    width: 40px;
+    height: 50px;
+    border-radius: 450px;
+}
+
+.heartBtn:hover{
+   transform: translateY(-5px) scale(1.2);
+   
+
+}
+
+.heartBtn:active{
+   transform: translateY(0px);
+
+}
+
+.volume{
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    position: absolute;
+    right:200px;
+    margin-top: 55px;
+    margin-right: -100px;
+    writing-mode: vertical-lr;
+    cursor: pointer;
+   
+}
+
+.v{
+    width: 8px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px black;
+    accent-color: red;
+    appearance: none;
+    background: rgba(64, 62, 62, 0.3);
+    padding: 0px;
+    
+}
+
+.volume1{
+    margin-right:-60px;
+    margin-top: -30px;
+}
+
+.volume2{
+   margin-top: 400px;
+}
+
+.volume1 svg{
+    width:35px;
+    height:35px;
+     color:rgba(0, 0, 0, 0.146);
+}
+
+.volume2 svg{
+    width:35px;
+    height:35px;
+    color:rgba(0, 0, 0, 0.146);
+}
+
+.song-times{
+    display:flex;
+    justify-content: space-between;
+    font-family: Cambo;
+    font-weight: bold;
+    color:rgba(0, 0, 0, 0.146);
+}
+
+.layout .header{
+    margin-top: -100px;
+    font-family: Cambo;
+    color:rgba(0, 0, 0, 0.146);
+    font-weight: bold;
+}
